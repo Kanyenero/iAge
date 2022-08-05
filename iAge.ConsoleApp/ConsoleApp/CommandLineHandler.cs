@@ -43,9 +43,9 @@ namespace iAge.ConsoleApp
 
         private Command CreateAddEmployeeCommandBranch()
         {
-            var employeeFirstNameOption = CreateSingleTokenOption(name: "FirstName", isRequired: true, description: "");
-            var employeeLastNameOption = CreateSingleTokenOption(name: "LastName", isRequired: true, description: "");
-            var employeeSalaryOption = CreateSingleTokenOption<decimal>(name: "Salary", isRequired: true, description: "");
+            var employeeFirstNameOption = CreateSingleTokenOption(name: "FirstName", isRequired: true, description: "Employee first name");
+            var employeeLastNameOption = CreateSingleTokenOption(name: "LastName", isRequired: true, description: "Employee last name");
+            var employeeSalaryOption = CreateSingleTokenOption<decimal>(name: "Salary", isRequired: true, description: "Employee salary");
 
             var addEmployeeCommand = new Command("-add", "");
 
@@ -71,12 +71,12 @@ namespace iAge.ConsoleApp
 
         private Command CreateUpdateEmployeeCommandBranch()
         {
-            var employeeIdOption = CreateSingleTokenOption<int>(name: "Id", isRequired: true, description: "");
-            var employeeFirstNameOption = CreateSingleTokenOption(name: "FirstName", isRequired: false, description: "");
-            var employeeLastNameOption = CreateSingleTokenOption(name: "LastName", isRequired: false, description: "");
-            var employeeSalaryOption = CreateSingleTokenOption<decimal>(name: "Salary", isRequired: false, description: "");
+            var employeeIdOption = CreateSingleTokenOption<int>(name: "Id", isRequired: true, description: "Employee Id");
+            var employeeFirstNameOption = CreateSingleTokenOption(name: "FirstName", isRequired: false, description: "Employee first name");
+            var employeeLastNameOption = CreateSingleTokenOption(name: "LastName", isRequired: false, description: "Employee last name");
+            var employeeSalaryOption = CreateSingleTokenOption<decimal>(name: "Salary", isRequired: false, description: "Employee salary");
 
-            var updateEmployeeCommand = new Command("-update", "");
+            var updateEmployeeCommand = new Command("-update", "Updates employee on [id] with specified data");
 
             updateEmployeeCommand.AddOption(employeeIdOption);
             updateEmployeeCommand.AddOption(employeeFirstNameOption);
@@ -102,9 +102,9 @@ namespace iAge.ConsoleApp
 
         private Command CreateGetEmployeeCommandBranch()
         {
-            var employeeIdOption = CreateSingleTokenOption<int>(name: "Id", isRequired: true, description: "");
+            var employeeIdOption = CreateSingleTokenOption<int>(name: "Id", isRequired: true, description: "Employee Id");
 
-            var getEmployeeCommand = new Command("-get", "");
+            var getEmployeeCommand = new Command("-get", "Gets employee with the specified id");
 
             getEmployeeCommand.AddOption(employeeIdOption);
 
@@ -124,9 +124,9 @@ namespace iAge.ConsoleApp
 
         private Command CreateDeleteEmployeeCommandBranch()
         {
-            var employeeIdOption = CreateSingleTokenOption<int>(name: "Id", isRequired: true, description: "");
+            var employeeIdOption = CreateSingleTokenOption<int>(name: "Id", isRequired: true, description: "Employee Id");
 
-            var deleteEmployeeCommand = new Command("-delete", "");
+            var deleteEmployeeCommand = new Command("-delete", "Deletes employee with the specified id");
 
             deleteEmployeeCommand.AddOption(employeeIdOption);
 
@@ -146,7 +146,7 @@ namespace iAge.ConsoleApp
 
         private Command CreateGetAllEmployeeCommandBranch()
         {
-            var getAllEmployeeCommand = new Command("-getall", "");
+            var getAllEmployeeCommand = new Command("-getall", "Provides all employees records from storage");
 
             getAllEmployeeCommand.SetHandler(() =>
             {
