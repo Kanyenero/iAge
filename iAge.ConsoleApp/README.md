@@ -1,4 +1,4 @@
-### Заметки по заданию
+## Заметки по заданию
 
 - программа генерирует JSON файл, если таковой не существует в указанной директории;
 - задать путь к JSON файлу можно только через явное указание в Program;
@@ -9,9 +9,9 @@
 С Newtonsoft.Json (да и вообще с Json в целом) работал впервые. Опирался на примеры из официальной документации:
 https://www.newtonsoft.com/json/help/html/Samples.htm
 
-### Примеры использования
+## Примеры использования
 
-#### Добавление сотрудника
+### Добавление сотрудника
 ```powershell
 > .\iAge.ConsoleApp.exe -add FirstName:Salor LastName:Moon Salary:10000000
 ```
@@ -41,7 +41,7 @@ Options:
   -?, -h, --help                    Show help and usage information
 ```
 
-#### Обновление сотрудника
+### Обновление сотрудника
 ```powershell
 > .\iAge.ConsoleApp.exe -update Id:0 Salary:1000
 ```
@@ -72,7 +72,7 @@ Options:
   -?, -h, --help         Show help and usage information
 ```
 
-#### Получение сотрудника
+### Получение сотрудника
 ```powershell
 > .\iAge.ConsoleApp.exe -get Id:0
 ```
@@ -100,7 +100,7 @@ Options:
   -?, -h, --help      Show help and usage information
 ```
 
-#### Удаление сотрудника
+### Удаление сотрудника
 ```powershell
 > .\iAge.ConsoleApp.exe -delete Id:0
 ```
@@ -128,7 +128,7 @@ Options:
   -?, -h, --help      Show help and usage information
 ```
 
-#### Получение всех сотрудников
+### Получение всех сотрудников
 ```powershell
 > .\iAge.ConsoleApp.exe -getall
 ```
