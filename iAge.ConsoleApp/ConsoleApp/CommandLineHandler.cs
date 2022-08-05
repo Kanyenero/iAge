@@ -47,7 +47,7 @@ namespace iAge.ConsoleApp
             var employeeLastNameOption = CreateSingleTokenOption(name: "LastName", isRequired: true, description: "Employee last name");
             var employeeSalaryOption = CreateSingleTokenOption<decimal>(name: "Salary", isRequired: true, description: "Employee salary");
 
-            var addEmployeeCommand = new Command("-add", "");
+            var addEmployeeCommand = new Command("-add", "Adds new employee to storage");
 
             addEmployeeCommand.AddOption(employeeFirstNameOption);
             addEmployeeCommand.AddOption(employeeLastNameOption);
