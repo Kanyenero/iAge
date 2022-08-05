@@ -34,8 +34,15 @@ namespace iAge.ConsoleApp.DataAccess
             }
             else
             {
-                int maxId = models.Select(m => m.Id).Max();
-                modelToAdd.Id = maxId + 1;
+                if (models.Count == 0)
+                {
+                    modelToAdd.Id = 0;
+                }
+                else
+                {
+                    int maxId = models.Select(m => m.Id).Max();
+                    modelToAdd.Id = maxId + 1;
+                }
             }
 
             models.Add(modelToAdd);
